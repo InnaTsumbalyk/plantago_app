@@ -1,5 +1,5 @@
 
-var app = angular.module('app', ['ionic', 'ngCordova', 'app.controllers', 'app.services']);
+var app = angular.module('app', ['ionic', 'ngCordova', 'leaflet-directive', 'app.controllers', 'app.services']);
 
   app.run(function($ionicPlatform) {
     $ionicPlatform.ready(function() {
