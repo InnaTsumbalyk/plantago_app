@@ -1,19 +1,8 @@
-app.controller('QuizCtrl', function($scope, $stateParams, $state) {
+app.controller('QuizCtrl', function($scope, $stateParams, $state, $ionicSlideBoxDelegate) {
 
-  $scope.questions = {
-    question_1: {
-      title: 'Some text?',
-      answer: ''
-    },
-    question_2: {
-      title: 'Some text?',
-      answer: ''
-    },
-    question_3: {
-      title: 'Some text?',
-      answer: ''
-    }
-  }
+  $scope.disableSwipe = function() {
+    $ionicSlideBoxDelegate.enableSlide(false);
+  };
 
   $scope.go_plantato = function () {
     $state.go('app.plantago_hero');
@@ -23,26 +12,9 @@ app.controller('QuizCtrl', function($scope, $stateParams, $state) {
     $state.go('app.clinics');
   }
 
-  $scope.$watch('questions.question_1.answer', function(newVal, oldVal) {
-    if (oldVal != '') {
-      if ($scope.questions.question_1.answer == 'A') {
-        $scope.go_plantato();
-      } else{
-        $scope.go_clinics();
-      };
-    };
-
-  });
-
-  $scope.$watch('questions.question_2.answer', function(newVal, oldVal) {
-    if (oldVal != '') {
-      if ($scope.questions.question_1.answer == 'A') {
-        $scope.go_plantato();
-      } else{
-        $scope.go_clinics();
-      };
-    }
-  });
+  $scope.slideTo = function(index) {
+    $ionicSlideBoxDelegate.slide(index, 1000)
+  };
 
 })
 ;
