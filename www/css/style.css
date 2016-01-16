@@ -11,3 +11,12 @@
   display: inline-block;
   padding: 3px 0 0 10px;
 }
+
+.plantago_hero_img {
+  width: 100%;
+  padding-top: 50px;
+}
+
+.slider-slide {
+  height: 400px;
+}

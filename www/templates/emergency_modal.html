@@ -1,0 +1,18 @@
+<ion-modal-view class="modal location-modal">
+  <ion-header-bar>
+    <button class="button button-clear button-modal-close" ng-click="emergency_call_hide()">Cloce</button>
+    <h1 class="title"></h1>
+  </ion-header-bar>
+  <ion-content has-header="true" padding="true" scroll="false">
+    <div class="current_location_address">
+      <i class="icon ion-ios-location location-pin"></i>
+      {{ 'address' }}
+    </div>
+    <div class="emergency-action">
+      <a class="button button-calm" ng-href="tel: {{emergency_number}}" ng-click="emergency_call_hide()">
+        <i class="icon ion-ios-telephone"></i>
+        <span>Emergency Call</span>
+      </a>
+    </div>
+  </ion-content>
+</ion-modal-view>

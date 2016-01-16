@@ -1,5 +1,5 @@
 
-var app = angular.module('app', ['ionic', 'ngCordova', 'app.controllers']);
+var app = angular.module('app', ['ionic', 'ngCordova', 'app.controllers', 'app.services']);
 
   app.run(function($ionicPlatform) {
     $ionicPlatform.ready(function() {
@@ -56,4 +56,8 @@ var app = angular.module('app', ['ionic', 'ngCordova', 'app.controllers']);
 
     $urlRouterProvider.otherwise('/app/quiz');
 
-  });
+  })
+  .config(['$ionicConfigProvider', function($ionicConfigProvider) {
+    $ionicConfigProvider.tabs.position('bottom');
+  }])
+  ;
