@@ -1,1 +1,13 @@
 /* Empty. Add your own CSS if you like */
+
+.emergency-action {
+  width: 100%;
+}
+
+.emergency-action a {
+  width: 100%;
+}
+.emergency-action a span{
+  display: inline-block;
+  padding: 3px 0 0 10px;
+}
