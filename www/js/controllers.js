@@ -23,9 +23,17 @@ angular.module('app.controllers', [])
 
     $scope.fetchInfo = function(params) {
       Info.get(params).$promise.then(function(data) {
-        $rootScope.emergency_number = data.emergency_number;
-        $rootScope.country_physician = data.country_physician;
-        console.log(data);
+        $rootScope.emergency_number = data.info.emergency_number;
+        $rootScope.formatted_address = data.info.formatted_address;
+        $rootScope.country_physician = data.info.physician;
+      }, function(error) {
+        // error handler
+      });
+    };
+
+    $scope.fetchClinics = function(params) {
+      Clinics.get(params).$promise.then(function(data) {
+        $rootScope.clinics = data.clinics;
       }, function(error) {
         // error handler
       });

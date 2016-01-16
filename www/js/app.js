@@ -44,6 +44,16 @@ var app = angular.module('app', ['ionic', 'ngCordova', 'app.controllers', 'app.s
         }
       })
 
+      .state('app.clinic', {
+        url: "/clinics/:id",
+        views: {
+          'tab_clinics': {
+            templateUrl: "templates/clinic.html",
+            controller: 'ClinicDetailsCtrl'
+          }
+        }
+      })
+
       .state('app.plantago_hero', {
         url: "/plantago_hero",
         views: {
