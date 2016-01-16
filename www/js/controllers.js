@@ -1,7 +1,7 @@
 /* Controllers */
 
 angular.module('app.controllers', [])
-  .controller('AppCtrl', function($scope, $rootScope, $cordovaGeolocation, Info, $ionicModal) {
+  .controller('AppCtrl', function($scope, $rootScope, $cordovaGeolocation, Info, Clinics, $ionicModal) {
 
     $rootScope.coords = {
       lat: 0,
@@ -15,6 +15,7 @@ angular.module('app.controllers', [])
           $rootScope.coords.lat  = position.coords.latitude;
           $rootScope.coords.lng = position.coords.longitude;
           $scope.fetchInfo({lat: $rootScope.coords.lat, lng: $rootScope.coords.lng});
+          $scope.fetchClinics({lat: $rootScope.coords.lat, lng: $rootScope.coords.lng});
         }, function(err) {
           console.log("Location error!");
           console.log(err);
@@ -34,6 +35,8 @@ angular.module('app.controllers', [])
     $scope.fetchClinics = function(params) {
       Clinics.get(params).$promise.then(function(data) {
         $rootScope.clinics = data.clinics;
+        console.log($rootScope.clinics)
+        console.log(data);
       }, function(error) {
         // error handler
       });

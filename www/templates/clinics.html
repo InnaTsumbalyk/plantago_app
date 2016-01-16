@@ -7,11 +7,30 @@
       </a>
     </div>
     <div class="clinics-list">
-      <div class="list" ng-if="clinics.lenght > 0">
-        <a class="item item-avatar" ng-repeat="clinic in clinics" href="#/app/clinics/{{clinic.id}}">
-          <img ng-src="{{clinic.image}}">
-          <h2>{{clinic.title}}</h2>
-          <p>{{clinic.description}}</p>
+      <div class="" ng-if="clinics.length > 0">
+        <div class="item-clinic" ng-repeat="clinic in clinics">
+          <div class="row">
+            <div class="col col-25">
+              <div class="item-clinic-img">
+                <img ng-src="http://46.101.206.45{{clinic.image}}" class="image-width">
+              </div>
+            </div>
+            <div class="col col-75">
+              <h2>{{clinic.name}}</h2>
+              <p>{{clinic.description}}</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col col-50">
+              <a class="button button-calm" ng-href="tel: {{clinic.phone}}">
+                <i class="icon ion-ios-telephone"></i>
+                <span>Emergency Call</span>
+              </a>
+            </div>
+            <div class="col col-50">
+              <a href="#/app/clinics/{{clinic.id}}" class="">Show map</a>
+            </div>
+          </div>
         </a>
       </div>
       <div ng-if="clinics.lenght == 0">clinics not found</div>
