@@ -19,7 +19,7 @@ angular.module('app.controllers', [])
           $scope.fetchInfo({lat: $rootScope.coords.lat, lng: $rootScope.coords.lng});
           $scope.fetchClinics({lat: $rootScope.coords.lat, lng: $rootScope.coords.lng});
         }, function(err) {
-          alert('geolocation not detect')
+          alert('Geolocation not detected!')
           console.log("Location error!");
           console.log(err);
         });

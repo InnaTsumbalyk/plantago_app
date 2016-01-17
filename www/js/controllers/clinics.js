@@ -65,7 +65,7 @@ app.controller('ClinicsCtrl', function($scope, $stateParams, $state, $rootScope)
         $scope.map.center  = {
           lat : $rootScope.coords.lat,
           lng : $rootScope.coords.lng,
-          zoom : 12
+          zoom : 13
         };
         angular.forEach($rootScope.clinics, function(clinic, index) {
           $scope.map.markers[clinic.id] = {
@@ -74,9 +74,28 @@ app.controller('ClinicsCtrl', function($scope, $stateParams, $state, $rootScope)
             message: clinic.name,
             // focus: true,
             draggable: false,
-            icon: ''
+            icon: {
+                iconUrl: 'img/H.png',
+                iconSize:     [20, 23],
+                shadowSize:   [50, 64],
+                iconAnchor:   [22, 94],
+                shadowAnchor: [4, 62]
+            }
           };
         });
+        $scope.map.markers['user'] = {
+            lat: $rootScope.coords.lat,
+            lng: $rootScope.coords.lng,
+            message: 'Current location',
+            draggable: false,
+            icon: {
+                iconUrl: 'img/Me.png',
+                iconSize:     [20, 40],
+                shadowSize:   [50, 64],
+                iconAnchor:   [22, 94],
+                shadowAnchor: [4, 62]
+            }
+          };
       };
 
     }
