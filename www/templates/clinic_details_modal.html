@@ -1,0 +1,42 @@
+<ion-modal-view class="modal clinic-details-modal">
+  <ion-header-bar>
+    <a class="clinic-details-close" ng-click="details_modal_hide()">Close</a>
+    <h1 class="title">Clinic Details</h1>
+  </ion-header-bar>
+  <ion-content has-header="true" padding="false" scroll="false">
+    <div class="clinic-details-photo">
+      <img ng-src="{{baseUrl}}{{current_clinic.image}}">
+    </div>
+    <div class="clinic-details-name"> {{current_clinic.name}}</div>
+    <div class="row clinic-details-tabs">
+      <a class="col col-50 tab-item-detail {{active_tab == 'details' ? 'item-detail-active' : ''}}" ng-click="active_tab = 'details'">
+        Description
+      </a>
+      <a class="col col-50 tab-item-contact {{active_tab == 'contacts' ? 'item-detail-active' : ''}}" ng-click="active_tab = 'contacts'">
+        Contacts
+      </a>
+    </div>
+    <div class="clinic-details-description" ng-if="active_tab == 'details'">
+      {{current_clinic.description}}
+    </div>
+    <div class="clinic-details-contacts" ng-if="active_tab == 'contacts'">
+      <div class="row">
+        <div class="col col-20">
+          <i class="icon ion-location"></i>
+        </div>
+        <div class="col col-66">
+          {{current_clinic.address}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-20">
+          <i class="icon ion-ios-telephone"></i>
+        </div>
+        <div class="col col-66">
+          {{current_clinic.phone}}
+        </div>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-modal-view>

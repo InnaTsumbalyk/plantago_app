@@ -37,8 +37,6 @@ angular.module('app.controllers', [])
     $scope.fetchClinics = function(params) {
       Clinics.get(params).$promise.then(function(data) {
         $rootScope.clinics = data.clinics;
-        console.log($rootScope.clinics)
-        console.log(data);
       }, function(error) {
         // error handler
       });

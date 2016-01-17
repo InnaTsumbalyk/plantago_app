@@ -1,7 +1,11 @@
 <ion-view view-title="Clinics" cache-view="false">
   <ion-content class="clinics-content">
-    <div class="clinics-content-title">
-      Nearest Clinics
+    <div class="clinic-content-title clinics-content-title">
+      <a ng-click="go_quiz()">
+        <i class="icon ion-chevron-left"></i>
+        Back
+      </a>
+      <span>Nearest Clinics</span>
     </div>
     <div class="call-physician">
       <a class="button button-energized" ng-href="tel: {{country_physician.phone}}">

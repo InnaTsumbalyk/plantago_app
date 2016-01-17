@@ -35,6 +35,9 @@
   background-color: #F64D4D;
   text-transform: uppercase;
   font-weight: bold;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
 }
 .emergency-action a span{
   display: inline-block;
@@ -85,6 +88,9 @@
   padding: 6px;
   text-align: center;
   margin-right: 15px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
 }
 
 .quiz-list .quiz-list-answer.active-answer .quiz-answer-number  {
@@ -115,6 +121,9 @@
   height: 85px;
   border-radius: 50%;
   border: 2px solid #ffffff;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
 }
 
 .clinics-content .call-physician .button-energized .physician-info {
@@ -139,15 +148,24 @@
   padding-top: 7px;
 }
 
-.clinics-content .clinics-content-title {
+.clinics-content .clinics-content-title{
   background-color: #30DBB5;
   text-align: center;
-  text-transform: uppercase;
   color: #ffffff;
   font-size: 16px;
   padding: 15px 0 10px 0;
   font-weight: bold;
   border-bottom: 1px solid #979797;
+}
+.clinics-content .clinics-content-title span {
+  text-transform: uppercase;
+  margin-left: -30px;
+}
+
+.clinics-content .clinics-content-title a {
+  float: left;
+  color: #ffffff;
+  padding-left: 10px;
 }
 
 .clinics-list {
@@ -166,6 +184,9 @@
   border-radius: 5px;
   background-color: #ffffff;
   margin-bottom: 20px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
 }
 .clinics-list .item-clinic .item-clinic-img {
   border-radius: 50%;
@@ -173,6 +194,9 @@
   height: 70px;
   border: 2px solid #30DBB5;
   overflow: hidden;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
 }
 .clinics-list .item-clinic .item-clinic-img img{
   width: 100%;
@@ -232,6 +256,10 @@
 
 /* clinic view */
 
+.clinic-content {
+  background-color: #f2f2f2;
+}
+
 .clinic-content .clinic-content-title {
   background-color: #30DBB5;
   text-align: center;
@@ -252,13 +280,38 @@
   padding-left: 10px;
 }
 
+.clinic-content .clinic-content-footer {
+  height: 70px;
+  background: #ffffff;
+  padding: 10px 0;
+}
+
+.clinic-content .clinic-content-footer .clinic-content-address span {
+  display: inline-block;
+  width: 85%;
+}
+
+.clinic-content .clinic-content-footer .clinic-content-address i {
+  display: inline-block;
+  width: 10%;
+  font-size: 28px;
+  color: #30DBB5;
+  position: relative;
+  top: -7px;
+  left: 10px;
+}
+
+.clinic-content .clinic-content-footer .clinic-content-icon {
+  text-align: right;
+  font-size: 22px;
+  color: #30DBB5;
+  padding: 8px 5px 0 0;
+}
+
 
 
 /* location-modal */
 
-.location-modal {
-
-}
 
 .location-modal .bar-header {
   background-color: #30DBB5;
@@ -285,6 +338,9 @@
   background: #ffffff;
   margin-bottom: 20px;
   padding: 15px 20px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
 }
 
 .location-modal .current-location {
@@ -303,4 +359,87 @@
 .location-modal .location-modal-address {
   font-size: 16px;
   line-height: 22px;
+}
+
+
+/* clinic-details-modal */
+.clinic-details-modal {
+  background-color: #f2f2f2;
+}
+
+.clinic-details-modal .has-header,
+.clinic-details-modal .bar-subheader {
+  top: 50px !important;
+}
+
+.clinic-details-modal .bar-header {
+  background-color: #30DBB5;
+  color: #ffffff;
+  height: 50px !important;
+}
+
+.clinic-details-modal .bar-header .clinic-details-close {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 12px !important;
+  padding-left: 5px;
+}
+
+.clinic-details-modal .bar-header .title {
+  color: #ffffff;
+  margin-top: 5px !important;
+}
+.clinic-details-modal .clinic-details-photo img {
+  width: 100%;
+}
+
+.clinic-details-modal .clinic-details-name {
+  background: #ffffff;
+  padding: 20px 30px;
+}
+
+.clinic-details-modal .clinic-details-tabs {
+  padding: 10px;
+  text-align: center;
+}
+
+.clinic-details-modal .clinic-details-tabs .tab-item-detail,
+.clinic-details-modal .clinic-details-tabs .tab-item-contact {
+  display: inline-block;
+  width: 50%;
+  border: 1px solid #FCB21D;
+  margin: 0;
+  color: #FCB21D;
+  font-weight: bold;
+}
+.clinic-details-modal .clinic-details-tabs .tab-item-detail {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+.clinic-details-modal .clinic-details-tabs .tab-item-contact {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+
+.clinic-details-modal .clinic-details-tabs .tab-item-detail.item-detail-active,
+.clinic-details-modal .clinic-details-tabs .tab-item-contact.item-detail-active {
+  background: #FCB21D;
+  color: #ffffff;
+}
+
+.clinic-details-modal .clinic-details-description {
+  padding: 10px;
+}
+
+.clinic-details-modal  .clinic-details-contacts .col-20 {
+  text-align: center;
+  font-size: 26px;
+  color: #30DBB5;
 }
