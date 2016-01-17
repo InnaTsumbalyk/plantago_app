@@ -1,7 +1,7 @@
 /* Controllers */
 
 angular.module('app.controllers', [])
-  .controller('AppCtrl', function($scope, $rootScope, $cordovaGeolocation, Info, Clinics, $ionicModal) {
+  .controller('AppCtrl', function($scope, $rootScope, $cordovaGeolocation, Info, Clinics, $ionicModal, $ionicHistory) {
 
     $rootScope.baseUrl = 'http://46.101.206.45';
 

@@ -1,9 +1,8 @@
-app.controller('ClinicsCtrl', function($scope, $stateParams, $state) {
-  $scope.go_quiz = function () {
-    angular.element(document.getElementsByClassName("quiz-list-answer")).removeClass('active-answer');
-    $state.go('app.quiz');
-  }
-
+app.controller('ClinicsCtrl', function($scope, $stateParams, $state, $rootScope) {
+    $scope.goBack = function () {
+      angular.element(document.getElementsByClassName("quiz-list-answer")).removeClass('active-answer');
+      $state.go('app.quiz');
+    }
 })
 
 .controller('ClinicDetailsCtrl', function ($scope, $rootScope, $cordovaGeolocation, $ionicHistory,
@@ -11,12 +10,15 @@ app.controller('ClinicsCtrl', function($scope, $stateParams, $state) {
 
   if (!$rootScope.clinics || ($rootScope.coords.lat == 0 && $rootScope.coords.lng == 0 )) {
     $state.go('app.quiz');
-
   } else {
 
     $scope.current_clinic = $filter('filter')($rootScope.clinics, {id: $stateParams.id})[0];
 
     $scope.active_tab = 'details';
+
+    $scope.goBack = function () {
+      $ionicHistory.goBack();
+    }
 
     $scope.map = {
       markers : {},
@@ -80,10 +82,6 @@ app.controller('ClinicsCtrl', function($scope, $stateParams, $state) {
     }
 
     $scope.setClinics();
-
-    $scope.go_back = function () {
-      $ionicHistory.goBack();
-    }
 
     $ionicModal.fromTemplateUrl('templates/clinic_details_modal.html', {
       scope: $scope

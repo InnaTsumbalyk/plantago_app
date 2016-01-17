@@ -16,8 +16,33 @@
   background-clip: padding-box;
 }
 
+.bar-stable .button.button-clear.showBack {
+  color: #ffffff;
+}
+
+.btn-back {
+  float: left;
+  position: absolute;
+  left: 0px;
+}
+
+.btn-back-modal {
+  color: #ffffff !important;
+}
+
+.bar.bar-stable {
+  border-color: #30DBB5;
+  border-bottom-width: 0;
+}
+
 .bar.bar-stable {
   background-color: #30DBB5;
+}
+
+.bar.bar-stable .title {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 .reset-top-bottom-p {
@@ -60,10 +85,14 @@
   text-align: center;
   background: #30DBB5;
   color: #ffffff;
-  padding: 20px 20%;
+  padding: 20px 20% 20px 20%;
   font-size: 20px;
   line-height: 30px;
   font-weight: bold;
+}
+
+.platform-ios .quiz-list .quiz-list-header {
+  padding-top: 35px;
 }
 
 .quiz-list .quiz-list-header i {
@@ -163,26 +192,6 @@
   padding-top: 7px;
 }
 
-.clinics-content .clinics-content-title{
-  background-color: #30DBB5;
-  text-align: center;
-  color: #ffffff;
-  font-size: 16px;
-  padding: 15px 0 10px 0;
-  font-weight: bold;
-  border-bottom: 1px solid #979797;
-}
-.clinics-content .clinics-content-title span {
-  text-transform: uppercase;
-  margin-left: -30px;
-}
-
-.clinics-content .clinics-content-title a {
-  float: left;
-  color: #ffffff;
-  padding-left: 10px;
-}
-
 .clinics-list {
   padding: 20px 10px;
 }
@@ -246,26 +255,6 @@
   border-right: 2px solid #30DBB5;
 }
 
-.hero-content .hero-content-title {
-  background-color: #30DBB5;
-  text-align: center;
-  color: #ffffff;
-  font-size: 16px;
-  padding: 15px 0 10px 0;
-  font-weight: bold;
-  border-bottom: 1px solid #979797;
-}
-.hero-content .hero-content-title span {
-  text-transform: uppercase;
-  margin-left: -30px;
-}
-
-.hero-content .hero-content-title a {
-  float: left;
-  color: #ffffff;
-  padding-left: 10px;
-}
-
 .hero-content .plantago-hero-img {
   width: 100%;
 }
@@ -274,26 +263,6 @@
 
 .clinic-content {
   background-color: #f2f2f2;
-}
-
-.clinic-content .clinic-content-title {
-  background-color: #30DBB5;
-  text-align: center;
-  color: #ffffff;
-  font-size: 16px;
-  padding: 15px 0 10px 0;
-  font-weight: bold;
-  border-bottom: 1px solid #979797;
-}
-.clinic-content .clinic-content-title span {
-  text-transform: uppercase;
-  margin-left: -30px;
-}
-
-.clinic-content .clinic-content-title a {
-  float: left;
-  color: #ffffff;
-  padding-left: 10px;
 }
 
 .clinic-content .clinic-content-footer {
@@ -335,15 +304,10 @@
 
 .location-modal .bar-header .location-modal-close {
   color: #ffffff;
-  font-size: 18px;
-  font-weight: bold;
-  margin-top: 12px !important;
-  padding-left: 5px;
 }
 
 .location-modal .bar-header .title {
   color: #ffffff;
-  /*margin-top: 5px !important;*/
 }
 
 .location-modal .current_location_address {
@@ -394,10 +358,6 @@
 
 .clinic-details-modal .bar-header .clinic-details-close {
   color: #ffffff;
-  font-size: 18px;
-  font-weight: bold;
-  margin-top: 12px !important;
-  padding-left: 5px;
 }
 
 .clinic-details-modal .bar-header .title {

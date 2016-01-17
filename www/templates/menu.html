@@ -1,21 +1,32 @@
-<!-- <ion-nav-view name="menuContent"></ion-nav-view> -->
-<ion-tabs class="tabs-icon-top tabs-color-active-positive">
-  <ion-tab title="Quize" hidden="true">
-    <ion-nav-view name="tab_quize"></ion-nav-view>
-  </ion-tab>
+<ion-side-menus enable-menu-with-back-views="true">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-stable" align-title="center">
+      <ion-nav-buttons side="left">
+      </ion-nav-buttons>
+      <ion-nav-buttons side="right">
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
 
-  <ion-tab title="Clinics" hidden="true">
-    <ion-nav-view name="tab_clinics"></ion-nav-view>
-  </ion-tab>
+    <ion-tabs class="tabs-icon-top tabs-color-active-positive">
+      <ion-tab title="Quize" hidden="true">
+        <ion-nav-view name="tab_quize"></ion-nav-view>
+      </ion-tab>
 
-  <ion-tab title="Plantago Hero" hidden="true">
-    <ion-nav-view name="tab_plantago_hero"></ion-nav-view>
-  </ion-tab>
+      <ion-tab title="Clinics" hidden="true">
+        <ion-nav-view name="tab_clinics"></ion-nav-view>
+      </ion-tab>
 
-  <div class="emergency-action">
-    <a  class="button button-assertive" ng-click="emergency_call_show()">
-      <i class="icon ion-ios-telephone"></i>
-      <span>Emergency Call</span>
-    </a>
-  </div>
-</ion-tabs>
+      <ion-tab title="Plantago Hero" hidden="true">
+        <ion-nav-view name="tab_plantago_hero"></ion-nav-view>
+      </ion-tab>
+
+      <div class="emergency-action">
+        <a  class="button button-assertive" ng-click="emergency_call_show()">
+          <i class="icon ion-ios-telephone"></i>
+          <span>Emergency Call</span>
+        </a>
+      </div>
+    </ion-tabs>
+  </ion-side-menu-content>
+</ion-side-menus>
