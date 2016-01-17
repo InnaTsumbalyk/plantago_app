@@ -1,9 +1,20 @@
-<ion-view view-title="Clinics">
-  <ion-content>
+<ion-view view-title="Clinics" cache-view="false">
+  <ion-content class="clinics-content">
+    <div class="clinics-content-title">
+      Nearest Clinics
+    </div>
     <div class="call-physician">
-      <a  class="button button-calm" ng-href="tel: {{country_physician.phone}}">
-        <img ng-src="http://46.101.206.45{{country_physician.image}}" class="country-physician-image">
-        <span>Call {{country_physician.name}}</span>
+      <a class="button button-energized" ng-href="tel: {{country_physician.phone}}">
+        <div class="row reset-top-bottom-p">
+          <div class="col col-33 reset-top-bottom-p">
+            <img ng-src="{{baseUrl}}{{country_physician.image}}" class="physician-image">
+          </div>
+          <div class="col col-66 reset-top-bottom-p physician-info">
+            <div class="physician-name">Call to {{country_physician.name}}</div>
+            <div class="physician-profesion"><span>teraupist</span></div>
+            <div class="physician-phone">{{country_physician.phone}}</div>
+          </div>
+        </div>
       </a>
     </div>
     <div class="clinics-list">
@@ -12,30 +23,34 @@
           <div class="row">
             <div class="col col-25">
               <div class="item-clinic-img">
-                <img ng-src="http://46.101.206.45{{clinic.image}}" class="image-width">
+                <img ng-src="{{baseUrl}}{{clinic.image}}">
               </div>
             </div>
             <div class="col col-75">
-              <h2>{{clinic.name}}</h2>
-              <p>{{clinic.address}}</p>
+              <div class="clinic-name">{{clinic.name}}</div>
             </div>
           </div>
           <div class="row">
-            <div class="col col-50">
-              <a class="button button-calm" ng-href="tel: {{clinic.phone}}">
-                <i class="icon ion-ios-telephone"></i>
-                <span>Call Clinic</span>
+            <div class="clinic-address">
+              <i class="icon ion-location"></i>
+              <span>{{clinic.address}}</span>
+            </div>
+          </div>
+          <div class="row reset-p clinic-actions">
+            <div class="col col-50 reset-p">
+              <a class="clinic-btn clinic-telephone-btn" ng-href="tel: {{clinic.phone}}">
+                <span>Call to Clinic</span>
               </a>
             </div>
-            <div class="col col-50">
-              <a class="button button-calm" href="#/app/clinics/{{clinic.id}}">
-                <span>Show map</span>
+            <div class="col col-50 reset-p">
+              <a class="clinic-btn" href="#/app/clinics/{{clinic.id}}">
+                <span>Show on Map</span>
               </a>
             </div>
           </div>
         </a>
       </div>
-      <div ng-if="clinics.lenght == 0">clinics not found</div>
+      <div class="no-clinics" ng-if="clinics.length == 0">Clinics not found</div>
     </div>
   </ion-content>
 </ion-view>

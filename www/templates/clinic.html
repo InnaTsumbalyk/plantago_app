@@ -1,5 +1,17 @@
 <ion-view view-title="Clinic">
-  <ion-content data-tap-disabled="true">
-    <leaflet center="map.center" markers="map.markers" layers="layers" height="480px" width="100%"></leaflet>
+  <ion-content data-tap-disabled="true" class="clinic-content">
+    <div class="clinic-content-title">
+      <a ng-click="go_quiz()">
+        <i class="icon ion-chevron-left"></i>
+        Back
+      </a>
+      <span>Map</span>
+    </div>
+    <div>
+      <leaflet center="map.center" markers="map.markers" layers="layers" height="400px" width="100%"></leaflet>
+    </div>
+    <div class="clinic-content-footer">
+
+    </div>
   </ion-content>
 </ion-view>

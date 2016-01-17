@@ -10,6 +10,19 @@
   height: 70px;
 }
 
+.bar.bar-stable {
+  background-color: #30DBB5;
+}
+
+.reset-top-bottom-p {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.reset-p {
+  padding: 0;
+}
+
 .emergency-action {
   width: 100%;
   padding: 10px 0;
@@ -78,17 +91,163 @@
   border: 2px solid #ffffff;
 }
 
+/* clinics-content */
 
-
-
-.plantago_hero_img {
-  width: 100%;
-  padding-top: 50px;
+.clinics-content {
+  background-color: #f2f2f2;
 }
 
-.item-clinic-img {
-  margin: 5px;
+.clinics-content .call-physician {
+  padding: 15px;
+  border-bottom: 1px solid #979797;
 }
-.image-width {
+
+.clinics-content .call-physician .button-energized {
+  background-color: #FCB21D;
+  color: #ffffff;
   width: 100%;
+  padding: 20px 0 0px 0;
+  min-height: 30px
+}
+
+.clinics-content .call-physician .button-energized .physician-image {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+}
+
+.clinics-content .call-physician .button-energized .physician-info {
+  text-align: left;
+  padding-top: 7px;
+}
+
+.clinics-content .call-physician .button-energized .physician-info .physician-name {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: bold;
+}
+.clinics-content .call-physician .button-energized .physician-info .physician-profesion {
+  line-height: 14px;
+}
+.clinics-content .call-physician .button-energized .physician-info .physician-profesion span {
+  font-size: 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #ffffff;
+}
+.clinics-content .call-physician .button-energized .physician-info .physician-phone {
+  padding-top: 7px;
+}
+
+.clinics-content .clinics-content-title {
+  background-color: #30DBB5;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 15px 0 10px 0;
+  font-weight: bold;
+  border-bottom: 1px solid #979797;
+}
+
+.clinics-list {
+  padding: 20px 10px;
+}
+
+.clinics-list .no-clinics {
+  color: #30DBB5;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 22px;
+  font-weight: bold;
+}
+.clinics-list .item-clinic {
+  border: 2px solid #30DBB5;
+  border-radius: 5px;
+  background-color: #ffffff;
+  margin-bottom: 20px;
+}
+.clinics-list .item-clinic .item-clinic-img {
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  border: 2px solid #30DBB5;
+  overflow: hidden;
+}
+.clinics-list .item-clinic .item-clinic-img img{
+  width: 100%;
+}
+.clinics-list .item-clinic .clinic-name {
+  font-size: 22px;
+  padding-top: 15px;
+  font-weight: bold;
+}
+.clinics-list .item-clinic .clinic-address {
+  padding: 5px 10px 0 10px;
+}
+
+.clinics-list .item-clinic .clinic-address i {
+  color :#F64D4D;
+  font-size: 22px;
+}
+
+.clinics-list .item-clinic .clinic-btn {
+  display: block;
+  text-decoration: none;
+  border-top: 2px solid #30DBB5;
+  color: #FCB21D;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px 0 ;
+  margin-top: 10px;
+}
+
+.clinics-list .item-clinic .clinic-telephone-btn {
+  border-right: 2px solid #30DBB5;
+}
+
+.hero-content .hero-content-title {
+  background-color: #30DBB5;
+  text-align: center;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 15px 0 10px 0;
+  font-weight: bold;
+  border-bottom: 1px solid #979797;
+}
+.hero-content .hero-content-title span {
+  text-transform: uppercase;
+  margin-left: -30px;
+}
+
+.hero-content .hero-content-title a {
+  float: left;
+  color: #ffffff;
+  padding-left: 10px;
+}
+
+.hero-content .plantago-hero-img {
+  width: 100%;
+}
+
+/* clinic view */
+
+.clinic-content .clinic-content-title {
+  background-color: #30DBB5;
+  text-align: center;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 15px 0 10px 0;
+  font-weight: bold;
+  border-bottom: 1px solid #979797;
+}
+.clinic-content .clinic-content-title span {
+  text-transform: uppercase;
+  margin-left: -30px;
+}
+
+.clinic-content .clinic-content-title a {
+  float: left;
+  color: #ffffff;
+  padding-left: 10px;
 }

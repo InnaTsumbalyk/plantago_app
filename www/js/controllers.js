@@ -3,6 +3,8 @@
 angular.module('app.controllers', [])
   .controller('AppCtrl', function($scope, $rootScope, $cordovaGeolocation, Info, Clinics, $ionicModal) {
 
+    $rootScope.baseUrl = 'http://46.101.206.45';
+
     $rootScope.coords = {
       lat: 0,
       lng: 0

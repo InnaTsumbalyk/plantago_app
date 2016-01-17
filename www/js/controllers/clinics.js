@@ -69,29 +69,9 @@ app.controller('ClinicsCtrl', function($scope, $stateParams) {
 
   $scope.setClinics();
 
-  // $scope.locate = function(){
-  //   $cordovaGeolocation
-  //     .getCurrentPosition()
-  //     .then(function (position) {
-  //       $scope.map.center.lat  = position.coords.latitude;
-  //       $scope.map.center.lng = position.coords.longitude;
-  //       $scope.map.center.zoom = 15;
-
-  //       $scope.map.markers.now = {
-  //         lat:position.coords.latitude,
-  //         lng:position.coords.longitude,
-  //         message: "You Are Here",
-  //         focus: true,
-  //         draggable: false
-  //       };
-
-  //     }, function(err) {
-  //       // error
-  //       console.log("Location error!");
-  //       console.log(err);
-  //     });
-
-  // };
-  // $scope.locate();
+  $scope.go_quiz = function (event) {
+    angular.element(document.getElementsByClassName("quiz-list-answer")).removeClass('active-answer');
+    $state.go('app.quiz');
+  }
 })
 ;
