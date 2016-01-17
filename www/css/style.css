@@ -254,9 +254,34 @@
 .clinics-list .item-clinic .clinic-telephone-btn {
   border-right: 2px solid #30DBB5;
 }
-
+.hero-content {
+  padding: 0 10px;
+}
 .hero-content .plantago-hero-img {
   width: 100%;
+  margin-top: -37px;
+}
+
+.hero-content .just-put {
+  display: inline-block;
+  background: #30DBB5;
+  padding: 15px 10px;
+  position: relative;
+  font-size: 36px;
+  color: #ffffff;
+  font-weight: bold;
+  bottom: -30px;
+}
+
+.hero-content  .get-well {
+  display: inline-block;
+  background: #FCB21D;
+  padding: 5px 10px;
+  position: relative;
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 22px;
+  bottom: -36px;
 }
 
 /* clinic view */
