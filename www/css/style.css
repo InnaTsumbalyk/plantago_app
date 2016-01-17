@@ -1,24 +1,94 @@
 /* Empty. Add your own CSS if you like */
 
-.emergency-action {
-  width: 100%;
+/* blue: #30DBB5 */
+/* orange: #FCB21D */
+/* red: #F64D4D */
+/* grey: #4C4C4C */
+/* grey border: #f2f2f2 */
+
+.tabs {
+  height: 70px;
 }
 
-.emergency-action a {
+.emergency-action {
   width: 100%;
+  padding: 10px 0;
+}
+
+.emergency-action a.button-assertive {
+  width: 70%;
+  margin: 0 15%;
+  border-radius: 10px;
+  background-color: #F64D4D;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 .emergency-action a span{
   display: inline-block;
   padding: 3px 0 0 10px;
 }
 
+/* quiz */
+
+.quiz-list {
+  background-color: #f2f2f2;
+}
+
+.quiz-list .quiz-list-header {
+  text-align: center;
+  background: #30DBB5;
+  color: #ffffff;
+  padding: 20px 20%;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: bold;
+}
+
+.quiz-list .quiz-list-header i {
+  display: block;
+  font-size: 50px;
+  padding-bottom: 10px;
+}
+
+.quiz-list .quiz-list-answer {
+  margin-top: 2px;
+  background: #ffffff;
+  padding: 15px;
+  color: #4C4C4C;
+  font-size: 16px;
+}
+
+.quiz-list .quiz-list-answer.active-answer {
+  background-color: #FCB21D;
+  color: #ffffff;
+}
+
+.quiz-list .quiz-list-answer .quiz-answer-number {
+  display: inline-block;
+  border: 2px solid #30DBB5;
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  padding: 6px;
+  text-align: center;
+  margin-right: 15px;
+}
+
+.quiz-list .quiz-list-answer.active-answer .quiz-answer-number  {
+  border: 2px solid #ffffff;
+}
+
+
+
+
+
+
+
+
+
 .plantago_hero_img {
   width: 100%;
   padding-top: 50px;
-}
-
-.slider-slide {
-  height: 400px;
 }
 
 .item-clinic-img {

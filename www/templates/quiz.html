@@ -1,60 +1,81 @@
 <ion-view view-title="Quiz">
-  <ion-content class="padding">
+  <ion-content class="quiz-list">
     <ion-slide-box on-slide-changed="slideHasChanged($index)" ng-init="disableSwipe()" show-pager="false">
       <ion-slide>
         <div class="box">
-          <h2>1. How are you feeling in yourself?</h2>
-          <div><a ng-click="slideTo(1)">I've general malaise</a></div>
-          <div><a ng-click="slideTo(2)">I've pain in specific body part</a></div>
-          <div><a ng-click="go_plantato()">I'm fine :)</a></div>
+          <div class="quiz-list-header">
+            <i class="icon ion-happy-outline"></i>
+            <div>How are you feeling in yourself?</div>
+          </div>
+          <div class="quiz-list-answer" ng-click="slideTo($event, 1)"><span class="quiz-answer-number">1</span> I've general malaise</div>
+          <div class="quiz-list-answer" ng-click="slideTo($event, 2)"><span class="quiz-answer-number">2</span> I've pain in specific body part</div>
+          <div class="quiz-list-answer" ng-click="go_plantato($event)"><span class="quiz-answer-number">3</span> I'm fine :)</div>
         </div>
       </ion-slide>
       <ion-slide>
         <div class="box">
-          <h2>2. Did you check body temperature?</h2>
-          <div><a ng-click="slideTo(4)">Yes, it's high (over 38)</a></div>
-          <div><a ng-click="slideTo(4)">Yes, just a little (37-38)</a></div>
-          <div><a ng-click="slideTo(5)">Not checked</a></div>
-          <div><a ng-click="slideTo(6)">I have not temperature</a></div>
+          <div class="quiz-list-header">
+            <i class="icon ion-thermometer"></i>
+            <div>Did you check body temperature?</div>
+          </div>
+          <div class="quiz-list-answer" ng-click="slideTo(4)"><span class="quiz-answer-number">1</span> Yes, it's high (over 38)</div>
+          <div class="quiz-list-answer" ng-click="slideTo(4)"><span class="quiz-answer-number">2</span> Yes, just a little (37-38)</div>
+          <div class="quiz-list-answer" ng-click="slideTo(5)"><span class="quiz-answer-number">3</span> Not checked</a></div>
+          <div class="quiz-list-answer" ng-click="slideTo(6)"><span class="quiz-answer-number">4</span> I have not temperature</div>
         </div>
       </ion-slide>
       <ion-slide>
         <div class="box">
-          <h2>3. Which part of body you have pain in?</h2>
-          <div><a ng-click="slideTo(3)">Head</a></div>
-          <div><a ng-click="slideTo(3)">Limbs</a></div>
-          <div><a ng-click="slideTo(3)">Сhest</a></div>
-          <div><a ng-click="slideTo(3)">Stomach</a></div>
+          <div class="quiz-list-header">
+            <i class="icon ion-heart-broken"></i>
+            <div>Which part of body you have pain in?</div>
+          </div>
+          <div class="quiz-list-answer" ng-click="slideTo(3)"><span class="quiz-answer-number">1</span> Head</div>
+          <div class="quiz-list-answer" ng-click="slideTo(3)"><span class="quiz-answer-number">2</span> Limbs</div>
+          <div class="quiz-list-answer" ng-click="slideTo(3)"><span class="quiz-answer-number">3</span> Сhest</div>
+          <div class="quiz-list-answer" ng-click="slideTo(3)"><span class="quiz-answer-number">4</span> Stomach</div>
         </div>
       </ion-slide>
       <ion-slide>
         <div class="box">
-          <h2>4. What describes your pain better?</h2>
-          <div><a ng-click="go_clinics()">Strong pain</a></div>
-          <div><a ng-click="go_clinics()">Pain for more than 24 hrs.</a></div>
-          <div><a ng-click="go_plantato()">Mild discomfort, let's call superhero</a></div>
+          <div class="quiz-list-header">
+            <i class="icon ion-clipboard"></i>
+            <div>What describes your pain better?</div>
+          </div>
+          <div class="quiz-list-answer" ng-click="go_clinics()"><span class="quiz-answer-number">1</span> Strong pain</div>
+          <div class="quiz-list-answer" ng-click="go_clinics()"><span class="quiz-answer-number">2</span> Pain for more than 24 hrs.</div>
+          <div class="quiz-list-answer" ng-click="go_plantato()"><span class="quiz-answer-number">3</span> Mild discomfort, let's call superhero</div>
         </div>
       </ion-slide>
       <ion-slide>
         <div class="box">
-          <h2>5. Do you have others symptoms?</h2>
-          <div><a ng-click="go_clinics()">No</a></div>
-          <div><a ng-click="go_clinics()">Aches</a></div>
+          <div class="quiz-list-header">
+            <i class="icon ion-ios-analytics"></i>
+            <div>Do you have others symptoms?</div>
+          </div>
+          <div class="quiz-list-answer" ng-click="go_clinics()"><span class="quiz-answer-number">1</span> No</div>
+          <div class="quiz-list-answer" ng-click="go_clinics()"><span class="quiz-answer-number">2</span> Aches</div>
         </div>
       </ion-slide>
       <ion-slide>
         <div class="box">
-          <h2>6. Do you have ache?</h2>
-          <div><a ng-click="go_clinics()">Yes</a></div>
-          <div><a ng-click="go_clinics()">No, but I've physical discomfort</a></div>
-          <div><a ng-click="go_plantato()">I have just bad mood</a></div>
+          <div class="quiz-list-header">
+            <i class="icon ion-arrow-graph-down-right"></i>
+            <div>Do you have ache?</div>
+          </div>
+          <div class="quiz-list-answer" ng-click="go_clinics()"><span class="quiz-answer-number">1</span> Yes</div>
+          <div class="quiz-list-answer" ng-click="go_clinics()"><span class="quiz-answer-number">2</span> No, but I've physical discomfort</div>
+          <div class="quiz-list-answer" ng-click="go_plantato()"><span class="quiz-answer-number">3</span> I have just bad mood</div>
         </div>
       </ion-slide>
       <ion-slide>
         <div class="box">
-          <h2>7. What type of malaise?</h2>
-          <div><a ng-click="go_clinics()">I've physical discomfort</a></div>
-          <div><a ng-click="go_plantato()">I have just bad mood</a></div>
+          <div class="quiz-list-header">
+            <i class="icon ion-ios-pulse-strong"></i>
+            <div>What type of malaise?</div>
+          </div>
+          <div class="quiz-list-answer" ng-click="go_clinics()"><span class="quiz-answer-number">1</span> I've physical discomfort</div>
+          <div class="quiz-list-answer" ng-click="go_plantato()"><span class="quiz-answer-number">2</span> I have just bad mood</div>
         </div>
       </ion-slide>
     </ion-slide-box>
