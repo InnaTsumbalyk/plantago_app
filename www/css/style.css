@@ -313,7 +313,6 @@
   font-size: 28px;
   color: #30DBB5;
   position: relative;
-  top: -7px;
   left: 10px;
 }
 
@@ -332,7 +331,6 @@
 .location-modal .bar-header {
   background-color: #30DBB5;
   color: #ffffff;
-  height: 50px !important;
 }
 
 .location-modal .bar-header .location-modal-close {
@@ -345,7 +343,7 @@
 
 .location-modal .bar-header .title {
   color: #ffffff;
-  margin-top: 5px !important;
+  /*margin-top: 5px !important;*/
 }
 
 .location-modal .current_location_address {
@@ -385,13 +383,13 @@
 
 .clinic-details-modal .has-header,
 .clinic-details-modal .bar-subheader {
-  top: 50px !important;
+  /*top: 50px !important;*/
 }
 
 .clinic-details-modal .bar-header {
   background-color: #30DBB5;
   color: #ffffff;
-  height: 50px !important;
+  /*height: 50px !important;*/
 }
 
 .clinic-details-modal .bar-header .clinic-details-close {
@@ -404,7 +402,7 @@
 
 .clinic-details-modal .bar-header .title {
   color: #ffffff;
-  margin-top: 5px !important;
+  /*margin-top: 5px !important;*/
 }
 .clinic-details-modal .clinic-details-photo img {
   width: 100%;
