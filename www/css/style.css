@@ -10,6 +10,12 @@
   height: 70px;
 }
 
+.button {
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+
 .bar.bar-stable {
   background-color: #30DBB5;
 }
@@ -126,6 +132,15 @@
   background-clip: padding-box;
 }
 
+.clinics-content .call-physician .button-energized .physician-image img{
+  border-radius: 50%;
+  width: 85px;
+  height: 85px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+
 .clinics-content .call-physician .button-energized .physician-info {
   text-align: left;
   padding-top: 7px;
@@ -202,8 +217,9 @@
   width: 100%;
 }
 .clinics-list .item-clinic .clinic-name {
-  font-size: 22px;
+  font-size: 20px;
   padding-top: 15px;
+  padding-left: 5px;
   font-weight: bold;
 }
 .clinics-list .item-clinic .clinic-address {
