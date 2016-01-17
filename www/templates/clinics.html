@@ -17,18 +17,20 @@
             </div>
             <div class="col col-75">
               <h2>{{clinic.name}}</h2>
-              <p>{{clinic.description}}</p>
+              <p>{{clinic.address}}</p>
             </div>
           </div>
           <div class="row">
             <div class="col col-50">
               <a class="button button-calm" ng-href="tel: {{clinic.phone}}">
                 <i class="icon ion-ios-telephone"></i>
-                <span>Emergency Call</span>
+                <span>Call Clinic</span>
               </a>
             </div>
             <div class="col col-50">
-              <a href="#/app/clinics/{{clinic.id}}" class="">Show map</a>
+              <a class="button button-calm" href="#/app/clinics/{{clinic.id}}">
+                <span>Show map</span>
+              </a>
             </div>
           </div>
         </a>
